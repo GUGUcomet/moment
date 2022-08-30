@@ -6,26 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>welcome</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/variable/pretendardvariable.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          backgroundImage:{
+            'type01' : "url('./img/type01.png')",
+            'type02' : "url('./img/type02.png')",
+            'type03' : "url('./img/type03.png')",
+
+          },
+          fontFamily: {
+            'sans': ['Pretendard','ui-sans-serif', 'system-ui'],
+        }
+      }
+    }
+  }
+  </script>
 </head>
 <body>
   <!-- container -->
   <section class="w-full h-screen bg-[url('./img/bgIntro.png')] bg-cover flex items-center justify-center">
     <div class="text-white text-center">
-      <ul>
-        <li class="bg-[url('./img/)">a</li>
-        <li class="bg-["></li>
-        <li class="bg-["></li>
+      <ul class="flex justify-between w-5/6 m-auto items-center">
+        <li class="bg-type01 w-[75px] h-72"></li>
+        <li class="bg-type02 w-[75px] h-72 mb-20"></li>
+        <li class="bg-type03 w-[75px] h-72"></li>
       </ul>
-      <h1 class="text-7xl font-black">WELCOME</h1>
+      <h1 class="text-7xl font-bold">WELCOME</h1>
       <p class="text-lg mt-2">find your moment</p>
-      <form class="text-black" id="login-form">
+      <form class="mt-10" id="login-form">
         <input
           required
           maxlength="15"
           type="text"
-          placeholder="What is your name?"
+          placeholder="이름을 입력하세요"
+          class="border bg-black rounded text-white h-[50px] w-[250px] pl-2"
         />
-        <input type="submit" value="Log In" class="text-white" />
+        <button type="button" value="Log In" class="text-white text-center w-20 bg-cyan-600 rounded h-[50px]">Login</button>
       </form>
     </div>
   </section>
